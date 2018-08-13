@@ -16,18 +16,19 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>employees-app</finalName>
+     <finalName>employees-app</finalName>
    <plugins>
-    <plugin>
-     <groupId>org.apache.tomcat.maven</groupId>
-     <artifactId>tomcat7-maven-plugin</artifactId>
-     <version>2.2</version>
-     <configuration>
-        <url>http://192.168.144.140:8080/manager/text</url>
-        <server>TomcatServer</server>
-        <path>/simple-webapp</path>
-     </configuration>
-    </plugin>
+      <plugin>
+          <groupId>org.apache.tomcat.maven</groupId>
+          <artifactId>tomcat7-maven-plugin</artifactId>
+          <version>2.2</version>
+          <configuration>
+           <url>http://192.168.144.140:8080/manager/text</url>
+           <server>tomcat-server</server>
+           <path>/myapp</path>
+           <warFile>/root/webproject/target/webproject.war</warFile>
+          </configuration>
+        </plugin>
    </plugins>
   </build>
 </project>
